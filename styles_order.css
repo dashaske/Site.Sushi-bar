@@ -1,0 +1,21 @@
+button.btn-group{
+    font-size: 12px;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+
+body{
+    background-color: #eee;
+    background-image: url(bg_order.jpg);
+    background-size: 100%;
+    backdrop-filter: blur(10px);
+    font-family: Arial;
+    border-radius: 10%;
+}
+
+#main-btn {
+    font-size: 12px;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+

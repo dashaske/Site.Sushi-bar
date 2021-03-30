@@ -1,0 +1,30 @@
+body {
+    background-color: #eee;
+    background-image: url(bg_order.jpg);
+    background-size: 100%;
+    backdrop-filter: blur(10px);
+    font-family: Arial;
+    border-radius: 10%;
+}
+
+div {
+    background-color: rgb(230, 102, 102);
+}
+
+thead {
+    background-color: rgb(230, 102, 102);
+    color: blanchedalmond;
+}
+
+tbody {
+    background-color: blanchedalmond;
+}
+
+h1 {
+    font-family: "Arial";
+    font-weight: bold; 
+    text-transform: uppercase;
+    font-size: 35px; 
+    color: rgb(255, 255, 255);
+}
+
