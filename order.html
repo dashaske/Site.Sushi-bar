@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="rus">
+<html lang="ru">
 
 <head>
     <title>Суши-бар "Суши на дом"</title>
@@ -15,9 +15,31 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles_order.css" />
+    <!-- Кодировка страницы -->
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(76087228, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/76087228" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <div class="container bg-danger text-white">
         <div class="text-lg-center">
             <div class="text-center">
@@ -35,112 +57,117 @@
     </h7>
 
     <br /><br />
-    <h3 class="text">Адрес доставки и контактная информация</h3>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div class="text">
-                    ФИО*
-                </div>
-                <div class="d-md-inline-flex">
-                    <input class="form-control me-lg-0" name="text" type="search" placeholder="ФИО">
-                </div>
-
-                <br /><br />
-                <div class="text">
-                    Улица*
-                </div>
-                <div class="d-md-inline-flex">
-                    <input class="form-control me-lg-0" name="text" type="search" placeholder="Название улицы">
-                </div>
-
-                <br /><br />
-                <div class="text">
-                    Корпус*
-                </div>
-                <div class="d-md-inline-flex">
-                    <input class="form-control me-lg-0" name="text" type="search" placeholder="Номер корпуса">
-                </div>
-            </div>
-
-            <div class="col-sm">
-                <div class="text">
-                    Номер телефона*
-                </div>
-                <div class="d-md-inline-flex">
-                    <input class="form-control me-lg-0" name="tel" type="tel" placeholder="Номер телефона">
-                </div>
-
-                <br /><br />
-                <div class="text">
-                    Дом*
-                </div>
-                <div class="d-md-inline-flex">
-                    <input class="form-control me-lg-0" name="number" type="search" placeholder="Номер дома">
+    <form class="main-content" id="form">
+        <h3 class="text">Адрес доставки и контактная информация</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="text">
+                        ФИО*
+                    </div>
+                    <div class="d-md-inline-flex">
+                        <input class="form-control me-lg-0" type="search" name="name" placeholder="ФИО">
+                    </div>
 
                     <br /><br />
                     <div class="text">
-                        Квартира*
+                        Улица*
                     </div>
                     <div class="d-md-inline-flex">
-                        <input class="form-control me-lg-0" name="number" type="search" placeholder="Номер квартиры">
+                        <input class="form-control me-lg-0" type="search" name="street"
+                            placeholder="Название улицы">
+                    </div>
+
+                    <br /><br />
+                    <div class="text">
+                        Корпус*
+                    </div>
+                    <div class="d-md-inline-flex">
+                        <input class="form-control me-lg-0" name="housing" type="search" placeholder="Номер корпуса">
                     </div>
                 </div>
 
                 <div class="col-sm">
-                    <h3 class="text">Оплата:</h3>
-                    <div class="btn-group" role="group" aria-label="Basic outlined example" id="main-btn">
-                        <a type="button" class="btn btn-outline-primary">Наличными</a>
-                        <a type="button" class="btn btn-outline-primary">Картой</a>
+                    <div class="text">
+                        Номер телефона*
                     </div>
-                </div>
-            </div>
+                    <div class="d-md-inline-flex">
+                        <input class="form-control me-lg-0" name="phone" type="tel" placeholder="Номер телефона">
+                    </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <br />
+                    <br /><br />
+                    <div class="text">
+                        Дом*
+                    </div>
+                    <div class="d-md-inline-flex">
+                        <input class="form-control me-lg-0" name="home" type="search" placeholder="Номер дома">
+
+                        <br /><br />
                         <div class="text">
-                            Этаж*
+                            Квартира*
                         </div>
-                            <input class="form-control me-lg-0" name="number" type="search" placeholder="Этаж">
+                        <div class="d-md-inline-flex">
+                            <input class="form-control me-lg-0" name="homenumber" type="search"
+                                placeholder="Номер квартиры">
+                        </div>
                     </div>
 
-                    <div class="col-sm-8">
-                        <br />
-                        <div class="text">
-                            Подъезд*
-                        </div>
-                            <input class="form-control me-lg-0" name="number" type="search" placeholder="Подъезд">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="mb-3">
-                        <br />
-                        <label for="exampleFormControlTextarea1" class="form-label">Оставьте комментарий к заказу, если
-                            необходимо</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <h3 class="text">Сумма к оплате:</h3>
-            <br />
-            <div class="container">
-                <div class="row">
                     <div class="col-sm">
-                        <a type="button" class="btn btn-success" href="table.html">Оформить заказ</a>
+                        <h3 class="text">Оплата:</h3>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example" id="main-btn">
+                            <a type="button" class="btn btn-outline-primary">Наличными</a>
+                            <a type="button" class="btn btn-outline-primary">Картой</a>
+                        </div>
                     </div>
-                    <div class="col-sm-9">
-                        <a type="button" class="btn btn-success" href="index.html">Отмена</a>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <br />
+                            <div class="text">
+                                Этаж*
+                            </div>
+                            <input class="form-control me-lg-0" name="floor" type="search" placeholder="Этаж">
+                        </div>
+
+                        <div class="col-sm-8">
+                            <br />
+                            <div class="text">
+                                Подъезд*
+                            </div>
+                            <input class="form-control me-lg-0" name="porch" type="search" placeholder="Подъезд">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="mb-3">
+                            <br />
+                            <label for="exampleFormControlTextarea1" class="form-label">Оставьте комментарий к заказу,
+                                если
+                                необходимо</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3 class="text">Сумма к оплате:</h3>
+                <br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <button type="submit" class="btn btn-success">
+                                Отправить
+                            </button>
+                            <a href="index.html" type="button" class="btn btn-success">Отмена</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+    </form>
+    <script src="js/site.js"></script>
 </body>
 
 </html>
